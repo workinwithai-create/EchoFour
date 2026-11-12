@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EchoFour — live echo desk</title>
+  <meta name="description" content="Four live-instrument bars of delayed answer. Space so the next section can enter clean." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<main>
+  <p class="eyebrow">WorkinWithAI · live chairs</p>
+  <h1>EchoFour</h1>
+  <p class="lead">Four-bar live echo desk. Generators loop the motif or dump density. Session players write four live bars of delayed answer — nylon echo, violin tail, trumpet recall — so the section has space and the track can finish.</p>
+  <p class="status" id="status">Seating chairs…</p>
+  <div class="controls">
+    <label>BPM <input type="number" id="bpm" min="60" max="180" value="96" /></label>
+    <label>Key <select id="key"><option>A minor</option><option>C major</option><option>E major</option><option>D minor</option><option>G major</option></select></label>
+    <label>Chords <input type="text" id="chords" value="Am F C G" placeholder="Am F C G" /></label>
+  </div>
+  <p class="eyebrow">Echo</p>
+  <div class="row" id="recipes"></div>
+  <p class="eyebrow">Form · motif 1–4 · echo 5–8</p>
+  <div class="bars" id="bars"></div>
+  <h2>Punch list</h2>
+  <pre id="punch"></pre>
+  <p class="note">iOS silent switch mutes Web Audio. Tap to start audio. Hardware MIDI accepted.</p>
+</main>
+<div class="dock">
+  <button id="playA">A · Motif</button>
+  <button id="playB">B · Echo</button>
+  <button id="play8">8 · Echo only</button>
+  <button class="ghost" id="stop">Stop</button>
+  <button class="ghost" id="copy">Copy punch</button>
+  <button class="ghost" id="export">Export WAV+MIDI</button>
+</div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
